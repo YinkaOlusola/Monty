@@ -42,4 +42,10 @@ typedef struct instruction_s
 } instruction_t;
 
 
+
+
+void print_all(stack_t **head, unsigned int counter);
+
+
+
 #endif
