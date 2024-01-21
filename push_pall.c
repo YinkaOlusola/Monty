@@ -1,11 +1,12 @@
 #include "monty.h"
+
 /**
- * push_to_stack - add node to the stack
+ * f_push - add node to the stack
  * @head: stack head
  * @counter: line_number
  * Return: no return
 */
-void push_to_stack(stack_t **head, unsigned int counter)
+void f_push(stack_t **head, unsigned int counter)
 {
 	int n, j = 0, flag = 0;
 
@@ -34,4 +35,27 @@ void push_to_stack(stack_t **head, unsigned int counter)
 		addnode(head, n);
 	else
 		addqueue(head, n);
+}
+
+
+
+/**
+ * f_pall - prints the stack
+ * @head: stack head
+ * @counter: no used
+ * Return: no return
+*/
+void f_pall(stack_t **head, unsigned int counter)
+{
+	stack_t *h;
+	(void)counter;
+
+	h = *head;
+	if (h == NULL)
+		return;
+	while (h)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+	}
 }
