@@ -62,8 +62,15 @@ extern bus_t bus;
 
 
 void print_all(stack_t **head, unsigned int counter);
-void push_to_stack(stack_t **head, unsigned int counter)
-
+void push_to_stack(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
+char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
+ssize_t getstdin(char **lineptr, int file);
+char  *clean_line(char *content);
+void addnode(stack_t **head, int n);
+void addqueue(stack_t **head, int n);
+void f_queue(stack_t **head, unsigned int counter);
+void free_stack(stack_t *head);
 
 
 
